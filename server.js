@@ -28,11 +28,16 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
 
 
-app.set('port', 3030);
+app.set('port', process.env.PORT || 3030);
 app.listen(app.get('port'));
 
-
-mongoose.connect('mongodb://localhost/multivision');
+if(env === 'development'){
+	console.log("Connecting to local mongodb");
+	mongoose.connect('mongodb://localhost/multivision');
+} else{
+	console.log("Connecting to MongoLAB mongodb");
+	mongoose.connect('mongodb://rafaelpossas:rage1283@ds041821.mongolab.com:41821/multivision');
+}
 
 var db = mongoose.connection;
 db.on('error',console.error.bind(console,'connection error....'));
