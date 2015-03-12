@@ -11,8 +11,7 @@
 <body ng-app="app">
 <% if(user) { %>
 <script type="text/javascript">
-    window.currentUser =
-    <%- JSON.stringify(user) %>
+    window.currentUser = <%- JSON.stringify(user) %>
 </script>
 <% } %>
 
@@ -40,6 +39,7 @@
 <footer class="container text-center">
     <p> &copy; Multivision Corp International Ltd</p>
 </footer>
+
 <script type="text/javascript" src="/vendor/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="/vendor/angular/angular.js"></script>
 <script type="text/javascript" src="/vendor/angular-cookies/angular-cookies.js"></script>
