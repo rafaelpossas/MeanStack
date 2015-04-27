@@ -28,7 +28,6 @@ exports.createUser = function(req,res,next){
 }
 exports.updateUser = function(req,res,next){
 	var userUpdates = req.body;
-	console.log(req.user);
 	if(req.user._id != userUpdates._id && !req.user.hasRole('admin')){
 		res.status(403);
 		return res.end();

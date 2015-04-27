@@ -15,30 +15,41 @@
 </script>
 <% } %>
 
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/">
-                Multivision
-            </a>
-        </div>
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="/">Home</a>
-                </li>
-            </ul>
-            <div ng-include="'/partials/account/navbar-login.ejs'"></div>
+
+
+<nav>
+    <div class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">
+                    Multivision
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/courses"> Courses</a>
+                    </li>
+                </ul>
+                <div ng-include="'/partials/account/navbar-login.ejs'"></div>
+            </div>
         </div>
     </div>
+</nav>
+
+<div class="main-container container-fluid clearfix" ng-view>
+
 </div>
 
-<div ng-view>
-</div>
-
-<footer class="container text-center">
+<footer style="position: absolute; bottom: 0px;left: 0;right: 0;overflow: hidden">
     <p> &copy; Multivision Corp International Ltd</p>
 </footer>
+
+
+
 
 <script type="text/javascript" src="/vendor/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="/vendor/angular/angular.js"></script>
@@ -53,12 +64,15 @@
 <script type="text/javascript" src="/js/account/mvNavBarLoginCtrl.js"></script>
 <script type="text/javascript" src="/js/account/mvSignupCtrl.js"></script>
 <script type="text/javascript" src="/js/account/mvProfileCtrl.js"></script>
+<script type="text/javascript" src="/js/courses/mvCourseCtrl.js"></script>
+<script type="text/javascript" src="/js/courses/mvCourseListCtrl.js"></script>
+<script type="text/javascript" src="/js/courses/mvCourseDetailsCtrl.js"></script>
+<script type="text/javascript" src="/js/courses/mvCourse.js"></script>
 <script type="text/javascript" src="/js/common/mvNotifier.js"></script>
 <script type="text/javascript" src="/js/account/mvIdentity.js"></script>
 <script type="text/javascript" src="/js/account/mvAuth.js"></script>
 <script type="text/javascript" src="/js/account/mvUser.js"></script>
 
 </body>
-
 
 </html>
