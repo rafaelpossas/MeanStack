@@ -1,0 +1,40 @@
+<div class="well" ng-init="init()" xmlns="http://www.w3.org/1999/html" style="position: relative;">
+    <button class="btn btn-primary top-right-bar" ng-click="saveCourse()" style="margin-top: 7px">Salvar</button>
+    <form class="form-horizontal">
+        <legend>Edit Course</legend>
+        <div class="form-group">
+            <label class="col-md-1 control-label" for="title">Title</label>
+            <div class="col-md-6">
+                <input class="form-control" name="title" placeholder="Title", ng-model="title" required/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-1 control-label" for="date">Published Date</label>
+            <div class="col-md-6">
+                <input class="form-control" type="date" name="date" placeholder="Published date" ng-model="published" required/>
+            </div>
+        </div>
+        <div class="form-group has-feedback" id="tagInput">
+            <label class="col-md-1 control-label" for="tags">Tags</label>
+            <div class="col-md-6" name="tags">
+                <input class="form-control" type="text" name="tags" ng-model="currentTag"/>
+                <div class="help-block"></div>
+                <span class="form-control-feedback glyphicon glyphicon-plus" ng-click="addTag()" style="cursor: pointer;pointer-events: auto"/>
+                <div>
+                    <div  ng-repeat="tag in tags" class="curved-button" style="margin-right: 5px;margin-top: 5px;">
+                        <span class="glyphicon glyphicon-remove" ng-click="removeTag(tag,tags)"></span>
+                        {{tag}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-1 control-label" for="featured">Featured</label>
+            <div class="col-md-6 control-label" style="text-align: left;">
+                <input type="checkbox" placeholder="Yes" ng-model="featured"/>
+            </div>
+        </div>
+
+    </form>
+</div>

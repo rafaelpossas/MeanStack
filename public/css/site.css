@@ -1,0 +1,68 @@
+footer {
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  height: 40px;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  overflow: hidden; }
+  footer p {
+    border-top: 1px solid black; }
+
+nav {
+  height: 55px; }
+
+.content-container-85 {
+  height: 85%;
+  overflow: auto; }
+
+.top-right-bar {
+  position: absolute;
+  top: 0px;
+  right: 10px; }
+
+html, body {
+  height: 100%;
+  padding-bottom: 50px; }
+
+.main-container {
+  position: relative;
+  height: 100%; }
+
+.navbar-form .form-group {
+  margin-left: 10px; }
+.navbar-form button {
+  margin-left: 10px; }
+
+.toast-top-right {
+  top: 70px; }
+
+.navbar-right {
+  margin-right: 10px; }
+
+.curved-button {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: rgba(157, 157, 157, 0.3) none;
+  border: 1px solid transparent;
+  border-radius: 8px; }
+
+div.curved-button span {
+  font-size: 12px;
+  cursor: pointer;
+  margin-right: 5px; }
